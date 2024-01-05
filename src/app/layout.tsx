@@ -1,22 +1,23 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from "next";
+import "./globals.css";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
-  title: 'My Profile',
-  description: 'My Portfolio',
-}
+  title: "My Profile",
+  description: "My Portfolio",
+};
 
+const myFont = localFont({
+  src: "../public/fonts/mangat.ttf",
+});
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={myFont.className}>{children}</body>
     </html>
-  )
+  );
 }
