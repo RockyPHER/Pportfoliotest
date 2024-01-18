@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import DarkTheme from "@/icons/darkTheme.svg";
 import LightTheme from "@/icons/lightTheme.svg";
 import { useState } from "react";
@@ -9,52 +8,56 @@ export default function Home() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   return (
-    <main
-      className="h-[500vh] w-[100vw] bg-contain bg-gray-300"
-      style={{
-        backgroundImage:
-          "url(https://steamuserimages-a.akamaihd.net/ugc/929299608230076775/C82E83881837C5E420E53EFC1BA2CDAB689375A5/?imw=1024&imh=673&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true)",
-      }}
-    >
-      <div className="flex justify-between items-center fixed w-full h-[10vh] bg-white">
-        <div className="h-full w-[10vw]"></div>
-        <div className="flex justify-evenly items-center h-full w-[10vw] bg-gray-500">
-          {isDarkTheme ? (
-            <DarkTheme
-              onClick={() => setIsDarkTheme(!isDarkTheme)}
-              className="cursor-pointer w-12 h-12"
-            />
-          ) : (
-            <LightTheme
-              onClick={() => setIsDarkTheme(!isDarkTheme)}
-              className="cursor-pointer w-14 h-14"
-            />
-          )}
-        </div>
-      </div>
-      <div className="h-[10vh]" />
-      <div className="relative flex justify-center items-center w-full h-[70vh]">
-        <img
-          className="absolute right-0 translate-y-[10%] w-[50vw] h-[50vw]"
-          src="https://iili.io/J7dikdJ.png"
-        />
-        <div className="w-full flex justify-center items-center flex-row">
-          <div className="ml-10">
-            <h1 className="text-5xl">Rocky</h1>
-            <ul>
-              <li className="text-3xl">FullStack Developer</li>
-              <li className="text-xl">Designer</li>
-              <li className="text-xl">UX/UI</li>
-            </ul>
+    <main>
+      <nav></nav>
+      <div className="grid place-items-center grid-cols-3 auto-cols-min auto-rows-min grid-rows-16 gap-10 bg-gray-200 w-screen h-[800vh]">
+        <div
+          className="overflow-hidden relative bg-local bg-auto border-2 border-black col-span-3 row-span-1 w-[97vw] h-[95vh]"
+          style={{
+            backgroundImage:
+              "url(https://steamuserimages-a.akamaihd.net/ugc/929299608230076775/C82E83881837C5E420E53EFC1BA2CDAB689375A5/?imw=1024&imh=673&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true)",
+          }}
+        >
+          <div className="absolute bg-gradient-to-l from-[rgb(0,0,0,0.5)] to-transparent left-[50%] w-[50vw] h-[50vw]">
+            <img src="https://iili.io/J7dikdJ.png" className="w-full h-full" />
           </div>
         </div>
+        <div className="grid place-items-center grid-cols-2 grid-rows-1 gap-10 col-span-3">
+          <div className="bg-white border-2 border-black col-span-1 w-[47vw] h-[47vh]">
+            RESUMO
+          </div>
+          <div className="bg-white border-2 border-black col-span-1 w-[47vw] h-[47vh]">
+            SKILLS
+          </div>
+        </div>
+        <div className="bg-white border-2 border-black col-span-1 w-[30vw] h-[30vh]">
+          EXPERIENCIA1
+        </div>
+        <div className="bg-white border-2 border-black col-span-1 w-[30vw] h-[35vh]">
+          EXPERIENCIA2
+        </div>
+        <div className="bg-white border-2 border-black col-span-1 w-[30vw] h-[40vh]">
+          EXPERIENCIA3
+        </div>
+        <div className="bg-white border-2 border-black col-span-3 w-[95vw] h-[95vh]">
+          PROJETO1
+        </div>
+        <div className="bg-white border-2 border-black col-span-2 w-[50vw] h-[90vh]">
+          PROJETO2
+        </div>
+        <div className="bg-white border-2 border-black col-span-1 w-[45vw] h-[85vh]">
+          PROJETO3
+        </div>
+        <div className="bg-white border-2 border-black col-span-2 w-[70vw] h-[80vh]">
+          PROJETO4
+        </div>
+        <div className="bg-white border-2 border-black col-span-1 w-[20vw] h-[75vh]">
+          EXTRA
+        </div>
+        <div className="bg-white border-2 border-black col-span-3 w-[95vw] h-[60vh]">
+          CONTATO
+        </div>
       </div>
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div className="w-full h-[10vh] bg-black"></div>
     </main>
   );
 }
