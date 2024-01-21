@@ -13,13 +13,15 @@ import GimpIcon from "@/techs/gimp.svg";
 import CSharpIcon from "@/techs/csharp.svg";
 import BashIcon from "@/techs/bash.svg";
 
+import { SkillsDescription, AboutMeEng } from "./data";
+
 export default function Home() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   return (
     <main>
       <nav></nav>
-      <div className="grid place-items-center grid-flow-row-dense gap-5 grid-cols-3 auto-cols-min auto-rows-min grid-rows-16 bg-black w-screen h-[800vh]">
+      <div className="grid place-items-center grid-flow-row-dense gap-5 grid-cols-3 auto-cols-min auto-rows-min grid-rows-16 bg-gray-500 w-screen h-[800vh]">
         <div
           className="flex justify-start items-center overflow-hidden relative bg-local bg-cover border-2 border-slate-800 col-span-3 row-span-1 aspect-[16/9] w-[1200px] max-w-[1200px] min-w-[800px]"
           style={{
@@ -43,121 +45,19 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="col-span-3 aspect-square w-[600px]"></div>
+
+        <div className="bg-white border-2 border-slate-800 col-span-3 aspect-[16/9] w-[1000px]">
+          {AboutMeEng}
+        </div>
+
         <div className="flex flex-row col-span-3 gap-5">
           <div className="bg-black border-2 border-slate-800 col-span-2 aspect-[16/9] w-[880px]">
-            <p className="bg-white border-black border-b-2 border-r-2 text-black text-sm">
-              Self taught programmer. Why me? I do because i love this. I can
-              understand you. I get things done. About me I'm brazilian, started
-              to code in the end of 2023, while i worked as a butcher. The part
-              that i most like on coding is seeing the results of what im doing.
-              I love mangas aesthetics, Gym, running, philosophy, psychology and
-              self improvement. My favorite mangas are Vagabond and Vinland
-              Saga.
-            </p>
+            <p className="bg-white border-black border-b-2 border-r-2 text-black text-sm"></p>
           </div>
           <div className="bg-black border-2 border-slate-800 col-span-1 aspect-[9/16] w-[300px]">
             <h1>SKILLS</h1>
-            <div className="bg-white grid grid-cols-5 grid-rows-6">
-              <div>
-                <FigmaIcon className="w-10 h-10" />
-                <p>
-                  3/5 <br />
-                  Can full implement a figma design into code, with css,
-                  tailwind or blazor.
-                </p>
-              </div>
-              <div>
-                <PythonIcon className="w-10 h-10" />
-                <p>
-                  1/5 <br />
-                  Still learning, not a problem if a need to learn in the
-                  future. Python is not a hard language, i just don't used
-                  python much yet. But i have some projects to do in the future
-                  that uses python.
-                </p>
-              </div>
-              <div>
-                <PremiereProIcon className="w-10 h-10" />
-                <p>
-                  3/5 <br />I know everything i need to edit, already edited
-                  some videos for me and for friends, but nothing too
-                  professional. Can improve if needed.
-                </p>
-              </div>
-              <div>
-                <GimpIcon className="w-10 h-10" />
-                <p>
-                  3/5 <br />
-                  Dont have advanced knowledge of gimp, but i can use it.
-                  Normaly i do some basic edits, remove the background, add some
-                  subtitles, change some icon, etc.
-                </p>
-              </div>
-              <div>
-                <DebianIcon className="w-10 h-10" />
-                <p>
-                  3/5 <br />
-                  Suffered alot in the past, know i can most features of debian,
-                  it helped me alot to understand operational system
-                  archtecture.
-                </p>
-              </div>
-              <div>
-                <BashIcon className="w-10 h-10" />
-                <p>
-                  3/5 <br /> Thanks to debian i learn bash, i can do most
-                  commands. Never needed to code something in it but i can do it
-                  if necessary.
-                </p>
-              </div>
-              <div>
-                <TailwindIcon className="w-10 h-10" />
-                <p>
-                  5/5 <br />I am a fan of tailwind. At first glance i hated, but
-                  thanks to NextJs i started learning and i learn to love it. I
-                  can do everything with it.
-                </p>
-              </div>
-              <div>
-                <CSharpIcon className="w-10 h-10" />
-                <p>
-                  2/5 <br /> My first personal project was with C#, i wanted the
-                  challenge of learning a hard language from zero. I made a
-                  discord bot and a full backend with it. Still need to learn
-                  much things, but i have the basics.
-                </p>
-              </div>
-              <div>
-                <MariaDbIcon className="w-10 h-10" />
-                <p>
-                  4/5 <br />
-                  Every backend i made i used MariaDB, Dont use much of it
-                  syntax, thanks to ORMs but i can use if necessary.
-                </p>
-              </div>
-              <div>
-                <DockerIcon className="w-10 h-10" />
-                <p>
-                  4/5 <br /> Have a great understanding of its functioning, used
-                  on my backend projects. Still not an especialist.
-                </p>
-              </div>
-              <div>
-                <NextJSIcon className="w-10 h-10" />
-                <p>
-                  3/5 <br /> My favorite JS framework, every project that i can,
-                  i use nextjs, don't know every feature, but have a greate
-                  experience with it.
-                </p>
-              </div>
-              <div>
-                <ReactIcon className="w-10 h-10" />
-                <p>
-                  5/5 <br /> Core skill of my portfolio. Every frontend i do, i
-                  use React. Know everything i need to code with it.
-                </p>
-              </div>
-            </div>
+            <div className="bg-white grid grid-cols-5 grid-rows-6"></div>
           </div>
         </div>
         <div className="flex flex-row justify-center items-start col-span-2 row-span-1 gap-8">
